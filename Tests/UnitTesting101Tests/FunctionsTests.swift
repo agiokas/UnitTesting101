@@ -2,13 +2,13 @@ import XCTest
 @testable import UnitTesting101
 
 final class FunctionsTests: XCTestCase {
-    func testAddTwoNumbers_basics() throws {
+    func testAddInt_basics() throws {
         XCTAssertEqual(try addInt(10, 20), 30)
         XCTAssertEqual(try addInt(-10, 20), 10)
         XCTAssertEqual(try addInt(-10, -20), -30)
     }
     
-    func testAddTwoNumbers_max() throws {
+    func testAddInt_max() throws {
         XCTAssertThrowsError(try addInt(1, Int.max))
         XCTAssertThrowsError(try addInt(Int.max, 1))
         XCTAssertThrowsError(try addInt(Int.max, Int.max))
@@ -22,7 +22,7 @@ final class FunctionsTests: XCTestCase {
         XCTAssertThrowsError(try addInt(Int.max - 10, Int.max - 10))
     }
     
-    func testAddTwoNumbers_min() throws {
+    func testAddInt_min() throws {
         XCTAssertThrowsError(try addInt(-1, Int.min))
         XCTAssertThrowsError(try addInt(Int.min, -1))
         XCTAssertThrowsError(try addInt(Int.min, Int.min))
