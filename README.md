@@ -1,3 +1,3 @@
 # UnitTesting101
 
-A description of this package.
+Sample code for the article about unit testing with swift.
