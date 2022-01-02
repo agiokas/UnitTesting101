@@ -8,14 +8,7 @@
 import XCTest
 @testable import UnitTesting101
 
-final class MyViewModelTests: XCTestCase {
-    var viewModel: MyViewModel? = nil
-    
-    override func setUp() {
-        super.setUp()
-        viewModel = MyViewModel(persons: samplePersons(), pets: samplePets())
-    }
-    
+final class MyViewModelTests: XCTestCase {    
     func testListData() {
         let viewModel = MyViewModel(persons: samplePersons(), pets: samplePets())
         
@@ -33,7 +26,7 @@ final class MyViewModelTests: XCTestCase {
             Pet(id: "1", name: "Max", ownerId: "1"),
             Pet(id: "2", name: "Azor", ownerId: "1"),
             Pet(id: "3", name: "Monty", ownerId: "2"),
-            Pet(id: "4", name: "Zizou", ownerId: "3")
+            Pet(id: "4", name: "Zizou", ownerId: "3"),
         ]
     }
     

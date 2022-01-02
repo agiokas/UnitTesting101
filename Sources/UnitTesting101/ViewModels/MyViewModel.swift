@@ -7,18 +7,6 @@
 
 import Foundation
 
-struct Person: Identifiable {
-    let id: String
-    let firstName: String
-    let lastName: String
-}
-
-struct Pet: Identifiable {
-    let id: String
-    let name: String
-    let ownerId: String
-}
-
 final class MyViewModel {
     private let persons: [Person]
     private let pets: [Pet]
