@@ -40,7 +40,7 @@ final class MyViewModel3_v2Tests: XCTestCase {
         let encodedPets = try PropertyListEncoder().encode(samplePets())
         let encodedPersons = try PropertyListEncoder().encode(samplePersons())
         
-        userDefaults.dataVerify = { key in
+        userDefaults.dataStub = { key in
             if key == "Persons" {
                 return encodedPersons
             }
@@ -63,10 +63,10 @@ final class MyViewModel3_v2Tests: XCTestCase {
 }
 
 final class UserDataStoreInterfaceMock: UserDataStoreInterface {
-    var dataVerify: (String) -> Data? = { _ in nil }
+    var dataStub: (String) -> Data? = { _ in nil }
     
     func data(forKey defaultName: String) -> Data? {
-        dataVerify(defaultName)
+        dataStub(defaultName)
     }
 }
 
